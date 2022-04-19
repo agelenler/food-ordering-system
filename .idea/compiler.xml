@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="order-messaging" />
+        <module name="order-application-service" />
+        <module name="common-domain" />
+        <module name="order-application" />
+        <module name="order-domain-core" />
+        <module name="order-container" />
+        <module name="order-dataaccess" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="" />
+      <module name="common-domain" options="-parameters" />
+      <module name="food-ordering-system" options="" />
+      <module name="order-application" options="-parameters" />
+      <module name="order-application-service" options="-parameters" />
+      <module name="order-container" options="-parameters" />
+      <module name="order-dataaccess" options="-parameters" />
+      <module name="order-domain-core" options="-parameters" />
+      <module name="order-messaging" options="-parameters" />
+      <module name="order-service" options="" />
+    </option>
+  </component>
+</project>

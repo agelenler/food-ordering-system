@@ -1,0 +1,23 @@
+digraph "food-ordering-system" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "com.food.ordering.system:order-application-service:jar:compile"[label=<order-application-service>]
+  "com.food.ordering.system:order-domain-core:jar:compile"[label=<order-domain-core>]
+  "com.food.ordering.system:order-application:jar:compile"[label=<order-application>]
+  "com.food.ordering.system:order-dataaccess:jar:compile"[label=<order-dataaccess>]
+  "com.food.ordering.system:order-messaging:jar:compile"[label=<order-messaging>]
+  "com.food.ordering.system:order-container:jar:compile"[label=<order-container>]
+
+  // Edge Definitions:
+  "com.food.ordering.system:order-application-service:jar:compile" -> "com.food.ordering.system:order-domain-core:jar:compile"
+  "com.food.ordering.system:order-application:jar:compile" -> "com.food.ordering.system:order-application-service:jar:compile"
+  "com.food.ordering.system:order-dataaccess:jar:compile" -> "com.food.ordering.system:order-application-service:jar:compile"
+  "com.food.ordering.system:order-messaging:jar:compile" -> "com.food.ordering.system:order-application-service:jar:compile"
+  "com.food.ordering.system:order-container:jar:compile" -> "com.food.ordering.system:order-domain-core:jar:compile"
+  "com.food.ordering.system:order-container:jar:compile" -> "com.food.ordering.system:order-application-service:jar:compile"
+  "com.food.ordering.system:order-container:jar:compile" -> "com.food.ordering.system:order-application:jar:compile"
+  "com.food.ordering.system:order-container:jar:compile" -> "com.food.ordering.system:order-dataaccess:jar:compile"
+  "com.food.ordering.system:order-container:jar:compile" -> "com.food.ordering.system:order-messaging:jar:compile"
+}

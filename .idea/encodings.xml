@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/common/common-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-container/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-dataaccess/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-domain/order-domain-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/order-messaging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
