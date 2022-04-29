@@ -1,0 +1,17 @@
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/exception/DomainException.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/event/publisher/DomainEventPublisher.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/event/DomainEvent.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/BaseId.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/OrderStatus.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/OrderApprovalStatus.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/Money.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/PaymentOrderStatus.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/OrderId.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/ProductId.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/entity/AggregateRoot.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/PaymentStatus.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/RestaurantId.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/RestaurantOrderStatus.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/CustomerId.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/entity/BaseEntity.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/DomainConstants.java

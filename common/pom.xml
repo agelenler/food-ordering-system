@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>common-domain</module>
+        <module>common-application</module>
+        <module>common-dataaccess</module>
     </modules>
 
 </project>
