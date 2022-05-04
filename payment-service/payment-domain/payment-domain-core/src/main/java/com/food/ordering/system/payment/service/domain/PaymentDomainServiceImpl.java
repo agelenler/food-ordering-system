@@ -120,7 +120,7 @@ public class PaymentDomainServiceImpl implements PaymentDomainService {
             if (!creditEntry.getTotalCreditAmount().equals(totalCreditHistory.subtract(totalDebitHistory))) {
                 log.error("Credit history total is not equal to current credit for customer id: {}!",
                         creditEntry.getCustomerId().getValue());
-                failureMessages.add("Credit history total is not equal to current credit for customer id: {}" +
+                failureMessages.add("Credit history total is not equal to current credit for customer id: " +
                         creditEntry.getCustomerId().getValue() + "!");
             }
     }

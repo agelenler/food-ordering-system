@@ -9,6 +9,7 @@
 /Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/OrderId.java
 /Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/ProductId.java
 /Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/entity/AggregateRoot.java
+/Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/event/EmptyEvent.java
 /Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/PaymentStatus.java
 /Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/RestaurantId.java
 /Users/Shared/projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/RestaurantOrderStatus.java

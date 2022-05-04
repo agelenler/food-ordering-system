@@ -61,7 +61,7 @@ public class RestaurantApprovalRequestHelper {
 
     private Restaurant findRestaurant(RestaurantApprovalRequest restaurantApprovalRequest) {
         Restaurant restaurant = restaurantDataMapper
-                .restaurantApprovalRequestAvroModelToRestaurant(restaurantApprovalRequest);
+                .restaurantApprovalRequestToRestaurant(restaurantApprovalRequest);
         Optional<Restaurant> restaurantResult = restaurantRepository.findRestaurantInformation(restaurant);
         if (restaurantResult.isEmpty()) {
             log.error("Restaurant with id " + restaurant.getId().getValue() + " not found!");

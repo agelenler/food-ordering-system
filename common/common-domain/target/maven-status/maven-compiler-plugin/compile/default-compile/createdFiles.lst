@@ -6,6 +6,7 @@ com/food/ordering/system/domain/valueobject/RestaurantOrderStatus.class
 com/food/ordering/system/domain/valueobject/OrderStatus.class
 com/food/ordering/system/domain/valueobject/ProductId.class
 com/food/ordering/system/domain/entity/AggregateRoot.class
+com/food/ordering/system/domain/event/EmptyEvent.class
 com/food/ordering/system/domain/valueobject/OrderId.class
 com/food/ordering/system/domain/entity/BaseEntity.class
 com/food/ordering/system/domain/valueobject/OrderApprovalStatus.class

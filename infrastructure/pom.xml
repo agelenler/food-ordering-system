@@ -10,5 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>infrastructure</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>saga</module>
+    </modules>
 
 </project>

@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class RestaurantDataMapper {
-    public Restaurant restaurantApprovalRequestAvroModelToRestaurant(RestaurantApprovalRequest
+    public Restaurant restaurantApprovalRequestToRestaurant(RestaurantApprovalRequest
                                                                              restaurantApprovalRequest) {
         return Restaurant.builder()
                 .restaurantId(new RestaurantId(UUID.fromString(restaurantApprovalRequest.getRestaurantId())))
