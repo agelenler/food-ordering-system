@@ -8,7 +8,6 @@
         <module>order-service</module>
         <module>common</module>
         <module>infrastructure</module>
-        <module>infrastructure/kafka</module>
         <module>customer-service</module>
         <module>payment-service</module>
         <module>restaurant-service</module>
@@ -39,6 +38,11 @@
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
                 <artifactId>saga</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>outbox</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -106,6 +110,33 @@
                 <artifactId>restaurant-messaging</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>customer-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>customer-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>customer-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>customer-dataaccess</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>customer-messaging</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
                 <artifactId>common-domain</artifactId>

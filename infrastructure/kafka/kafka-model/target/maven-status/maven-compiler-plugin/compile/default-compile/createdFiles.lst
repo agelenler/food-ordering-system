@@ -1,4 +1,6 @@
+com/food/ordering/system/kafka/order/avro/model/CustomerAvroModel$Builder.class
 com/food/ordering/system/kafka/order/avro/model/PaymentOrderStatus.class
+com/food/ordering/system/kafka/order/avro/model/CustomerAvroModel.class
 com/food/ordering/system/kafka/order/avro/model/PaymentRequestAvroModel$Builder.class
 com/food/ordering/system/kafka/order/avro/model/RestaurantApprovalResponseAvroModel.class
 com/food/ordering/system/kafka/order/avro/model/OrderApprovalStatus.class

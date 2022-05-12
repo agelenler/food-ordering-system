@@ -14,6 +14,10 @@
     <dependencies>
         <dependency>
             <groupId>com.food.ordering.system</groupId>
+            <artifactId>outbox</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.food.ordering.system</groupId>
             <artifactId>kafka-model</artifactId>
         </dependency>
         <dependency>
