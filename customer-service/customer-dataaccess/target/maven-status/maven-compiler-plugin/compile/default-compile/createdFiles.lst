@@ -1,6 +1,0 @@
-com/food/ordering/system/customer/service/dataaccess/customer/repository/CustomerJpaRepository.class
-com/food/ordering/system/customer/service/dataaccess/customer/entity/CustomerEntity$CustomerEntityBuilder.class
-com/food/ordering/system/customer/service/dataaccess/customer/exception/CustomerDataaccessException.class
-com/food/ordering/system/customer/service/dataaccess/customer/mapper/CustomerDataAccessMapper.class
-com/food/ordering/system/customer/service/dataaccess/customer/adapter/CustomerRepositoryImpl.class
-com/food/ordering/system/customer/service/dataaccess/customer/entity/CustomerEntity.class

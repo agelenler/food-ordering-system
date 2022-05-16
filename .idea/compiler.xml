@@ -55,7 +55,7 @@
       <module name="customer-domain-core" options="-parameters" />
       <module name="customer-messaging" options="-parameters" />
       <module name="customer-service" options="" />
-      <module name="food-ordering-system" options="-parameters" />
+      <module name="food-ordering-system" options="" />
       <module name="infrastructure" options="" />
       <module name="kafka" options="" />
       <module name="kafka-config-data" options="-parameters" />
