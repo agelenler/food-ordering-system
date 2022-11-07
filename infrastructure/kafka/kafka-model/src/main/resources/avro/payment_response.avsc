@@ -6,36 +6,31 @@
         {
             "name": "id",
             "type": {
-                "type": "string",
-                "logicalType": "uuid"
+                "type": "string"
             }
         },
         {
             "name": "sagaId",
             "type": {
-                "type": "string",
-                "logicalType": "uuid"
+                "type": "string"
             }
         },
         {
             "name": "paymentId",
             "type": {
-                "type": "string",
-                "logicalType": "uuid"
+                "type": "string"
             }
         },
         {
             "name": "customerId",
             "type": {
-                "type": "string",
-                "logicalType": "uuid"
+                "type": "string"
             }
         },
         {
             "name": "orderId",
             "type": {
-                "type": "string",
-                "logicalType": "uuid"
+                "type": "string"
             }
         },
         {
