@@ -17,16 +17,16 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
   private static final long serialVersionUID = -861064569672548277L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerAvroModel\",\"namespace\":\"com.food.ordering.system.kafka.order.avro.model\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"logicalType\":\"uuid\"}},{\"name\":\"username\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"firstName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lastName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerAvroModel\",\"namespace\":\"com.food.ordering.system.kafka.order.avro.model\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"username\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"firstName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lastName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
 
   private static final BinaryMessageEncoder<CustomerAvroModel> ENCODER =
-      new BinaryMessageEncoder<CustomerAvroModel>(MODEL$, SCHEMA$);
+      new BinaryMessageEncoder<>(MODEL$, SCHEMA$);
 
   private static final BinaryMessageDecoder<CustomerAvroModel> DECODER =
-      new BinaryMessageDecoder<CustomerAvroModel>(MODEL$, SCHEMA$);
+      new BinaryMessageDecoder<>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
@@ -50,7 +50,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
   public static BinaryMessageDecoder<CustomerAvroModel> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<CustomerAvroModel>(MODEL$, SCHEMA$, resolver);
+    return new BinaryMessageDecoder<>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
@@ -99,9 +99,14 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
     this.lastName = lastName;
   }
 
+  @Override
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
+
+  @Override
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
+
   // Used by DatumWriter.  Applications should not call.
+  @Override
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
@@ -112,21 +117,8 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
     }
   }
 
-  private static final org.apache.avro.Conversion<?>[] conversions =
-      new org.apache.avro.Conversion<?>[] {
-      null,
-      null,
-      null,
-      null,
-      null
-  };
-
-  @Override
-  public org.apache.avro.Conversion<?> getConversion(int field) {
-    return conversions[field];
-  }
-
   // Used by DatumReader.  Applications should not call.
+  @Override
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
@@ -501,6 +493,59 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
+  @Override protected boolean hasCustomCoders() { return true; }
+
+  @Override public void customEncode(org.apache.avro.io.Encoder out)
+    throws java.io.IOException
+  {
+    out.writeString(this.id);
+
+    out.writeString(this.username);
+
+    out.writeString(this.firstName);
+
+    out.writeString(this.lastName);
+
+  }
+
+  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
+    throws java.io.IOException
+  {
+    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
+    if (fieldOrder == null) {
+      this.id = in.readString();
+
+      this.username = in.readString();
+
+      this.firstName = in.readString();
+
+      this.lastName = in.readString();
+
+    } else {
+      for (int i = 0; i < 4; i++) {
+        switch (fieldOrder[i].pos()) {
+        case 0:
+          this.id = in.readString();
+          break;
+
+        case 1:
+          this.username = in.readString();
+          break;
+
+        case 2:
+          this.firstName = in.readString();
+          break;
+
+        case 3:
+          this.lastName = in.readString();
+          break;
+
+        default:
+          throw new java.io.IOException("Corrupt ResolvingDecoder.");
+        }
+      }
+    }
+  }
 }
 
 
