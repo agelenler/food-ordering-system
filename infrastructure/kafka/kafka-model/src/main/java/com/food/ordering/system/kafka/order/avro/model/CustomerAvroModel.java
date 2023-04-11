@@ -14,10 +14,10 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -861064569672548277L;
+  private static final long serialVersionUID = -6886319434873806459L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerAvroModel\",\"namespace\":\"com.food.ordering.system.kafka.order.avro.model\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"logicalType\":\"uuid\"}},{\"name\":\"username\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"firstName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lastName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerAvroModel\",\"namespace\":\"com.food.ordering.system.kafka.order.avro.model\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"logicalType\":\"uuid\"}},{\"name\":\"username\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"firstName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lastName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"test\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -77,6 +77,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
   private java.lang.String username;
   private java.lang.String firstName;
   private java.lang.String lastName;
+  private java.lang.String test;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -91,12 +92,14 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * @param username The new value for username
    * @param firstName The new value for firstName
    * @param lastName The new value for lastName
+   * @param test The new value for test
    */
-  public CustomerAvroModel(java.lang.String id, java.lang.String username, java.lang.String firstName, java.lang.String lastName) {
+  public CustomerAvroModel(java.lang.String id, java.lang.String username, java.lang.String firstName, java.lang.String lastName, java.lang.String test) {
     this.id = id;
     this.username = username;
     this.firstName = firstName;
     this.lastName = lastName;
+    this.test = test;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -108,12 +111,14 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
     case 1: return username;
     case 2: return firstName;
     case 3: return lastName;
+    case 4: return test;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   private static final org.apache.avro.Conversion<?>[] conversions =
       new org.apache.avro.Conversion<?>[] {
+      null,
       null,
       null,
       null,
@@ -134,6 +139,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
     case 1: username = value$ != null ? value$.toString() : null; break;
     case 2: firstName = value$ != null ? value$.toString() : null; break;
     case 3: lastName = value$ != null ? value$.toString() : null; break;
+    case 4: test = value$ != null ? value$.toString() : null; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -207,6 +213,23 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
   }
 
   /**
+   * Gets the value of the 'test' field.
+   * @return The value of the 'test' field.
+   */
+  public java.lang.String getTest() {
+    return test;
+  }
+
+
+  /**
+   * Sets the value of the 'test' field.
+   * @param value the value to set.
+   */
+  public void setTest(java.lang.String value) {
+    this.test = value;
+  }
+
+  /**
    * Creates a new CustomerAvroModel RecordBuilder.
    * @return A new CustomerAvroModel RecordBuilder
    */
@@ -251,6 +274,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
     private java.lang.String username;
     private java.lang.String firstName;
     private java.lang.String lastName;
+    private java.lang.String test;
 
     /** Creates a new Builder */
     private Builder() {
@@ -279,6 +303,10 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
         this.lastName = data().deepCopy(fields()[3].schema(), other.lastName);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
+      if (isValidValue(fields()[4], other.test)) {
+        this.test = data().deepCopy(fields()[4].schema(), other.test);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      }
     }
 
     /**
@@ -302,6 +330,10 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       if (isValidValue(fields()[3], other.lastName)) {
         this.lastName = data().deepCopy(fields()[3].schema(), other.lastName);
         fieldSetFlags()[3] = true;
+      }
+      if (isValidValue(fields()[4], other.test)) {
+        this.test = data().deepCopy(fields()[4].schema(), other.test);
+        fieldSetFlags()[4] = true;
       }
     }
 
@@ -465,6 +497,46 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       return this;
     }
 
+    /**
+      * Gets the value of the 'test' field.
+      * @return The value.
+      */
+    public java.lang.String getTest() {
+      return test;
+    }
+
+
+    /**
+      * Sets the value of the 'test' field.
+      * @param value The value of 'test'.
+      * @return This builder.
+      */
+    public com.food.ordering.system.kafka.order.avro.model.CustomerAvroModel.Builder setTest(java.lang.String value) {
+      validate(fields()[4], value);
+      this.test = value;
+      fieldSetFlags()[4] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'test' field has been set.
+      * @return True if the 'test' field has been set, false otherwise.
+      */
+    public boolean hasTest() {
+      return fieldSetFlags()[4];
+    }
+
+
+    /**
+      * Clears the value of the 'test' field.
+      * @return This builder.
+      */
+    public com.food.ordering.system.kafka.order.avro.model.CustomerAvroModel.Builder clearTest() {
+      test = null;
+      fieldSetFlags()[4] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public CustomerAvroModel build() {
@@ -474,6 +546,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
         record.username = fieldSetFlags()[1] ? this.username : (java.lang.String) defaultValue(fields()[1]);
         record.firstName = fieldSetFlags()[2] ? this.firstName : (java.lang.String) defaultValue(fields()[2]);
         record.lastName = fieldSetFlags()[3] ? this.lastName : (java.lang.String) defaultValue(fields()[3]);
+        record.test = fieldSetFlags()[4] ? this.test : (java.lang.String) defaultValue(fields()[4]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
