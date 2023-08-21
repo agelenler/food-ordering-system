@@ -5,6 +5,8 @@ target/
 !**/src/test/**/target/
 volumes/
 
+.idea
+
 *.log
 
 ### STS ###
