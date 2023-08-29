@@ -1,0 +1,243 @@
+{
+  "type": "record",
+  "name": "Envelope",
+  "namespace": "debezium.order.restaurant_approval_outbox",
+  "fields": [
+    {
+      "name": "before",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Value",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "type": "string",
+                "connect.version": 1,
+                "connect.name": "io.debezium.data.Uuid"
+              }
+            },
+            {
+              "name": "saga_id",
+              "type": {
+                "type": "string",
+                "connect.version": 1,
+                "connect.name": "io.debezium.data.Uuid"
+              }
+            },
+            {
+              "name": "created_at",
+              "type": {
+                "type": "string",
+                "connect.version": 1,
+                "connect.name": "io.debezium.time.ZonedTimestamp"
+              }
+            },
+            {
+              "name": "processed_at",
+              "type": [
+                "null",
+                {
+                  "type": "string",
+                  "connect.version": 1,
+                  "connect.name": "io.debezium.time.ZonedTimestamp"
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "type",
+              "type": "string"
+            },
+            {
+              "name": "payload",
+              "type": {
+                "type": "string",
+                "connect.version": 1,
+                "connect.name": "io.debezium.data.Json"
+              }
+            },
+            {
+              "name": "outbox_status",
+              "type": {
+                "type": "string",
+                "connect.version": 1,
+                "connect.parameters": {
+                  "allowed": "STARTED,COMPLETED,FAILED"
+                },
+                "connect.name": "io.debezium.data.Enum"
+              }
+            },
+            {
+              "name": "saga_status",
+              "type": {
+                "type": "string",
+                "connect.version": 1,
+                "connect.parameters": {
+                  "allowed": "STARTED,FAILED,SUCCEEDED,PROCESSING,COMPENSATING,COMPENSATED"
+                },
+                "connect.name": "io.debezium.data.Enum"
+              }
+            },
+            {
+              "name": "order_status",
+              "type": {
+                "type": "string",
+                "connect.version": 1,
+                "connect.parameters": {
+                  "allowed": "PENDING,PAID,APPROVED,CANCELLED,CANCELLING"
+                },
+                "connect.name": "io.debezium.data.Enum"
+              }
+            },
+            {
+              "name": "version",
+              "type": "int"
+            }
+          ],
+          "connect.name": "debezium.order.restaurant_approval_outbox.Value"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "after",
+      "type": [
+        "null",
+        "Value"
+      ],
+      "default": null
+    },
+    {
+      "name": "source",
+      "type": {
+        "type": "record",
+        "name": "Source",
+        "namespace": "io.debezium.connector.postgresql",
+        "fields": [
+          {
+            "name": "version",
+            "type": "string"
+          },
+          {
+            "name": "connector",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "ts_ms",
+            "type": "long"
+          },
+          {
+            "name": "snapshot",
+            "type": [
+              {
+                "type": "string",
+                "connect.version": 1,
+                "connect.parameters": {
+                  "allowed": "true,last,false,incremental"
+                },
+                "connect.default": "false",
+                "connect.name": "io.debezium.data.Enum"
+              },
+              "null"
+            ],
+            "default": "false"
+          },
+          {
+            "name": "db",
+            "type": "string"
+          },
+          {
+            "name": "sequence",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          {
+            "name": "schema",
+            "type": "string"
+          },
+          {
+            "name": "table",
+            "type": "string"
+          },
+          {
+            "name": "txId",
+            "type": [
+              "null",
+              "long"
+            ],
+            "default": null
+          },
+          {
+            "name": "lsn",
+            "type": [
+              "null",
+              "long"
+            ],
+            "default": null
+          },
+          {
+            "name": "xmin",
+            "type": [
+              "null",
+              "long"
+            ],
+            "default": null
+          }
+        ],
+        "connect.name": "io.debezium.connector.postgresql.Source"
+      }
+    },
+    {
+      "name": "op",
+      "type": "string"
+    },
+    {
+      "name": "ts_ms",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "transaction",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "block",
+          "namespace": "event",
+          "fields": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "total_order",
+              "type": "long"
+            },
+            {
+              "name": "data_collection_order",
+              "type": "long"
+            }
+          ],
+          "connect.version": 1,
+          "connect.name": "event.block"
+        }
+      ],
+      "default": null
+    }
+  ],
+  "connect.version": 1,
+  "connect.name": "debezium.order.restaurant_approval_outbox.Envelope"
+}
