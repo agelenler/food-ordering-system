@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="kafka-model" />
+    <orderEntry type="module" module-name="kafka-config-data" />
+    <orderEntry type="module" module-name="outbox" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.29" level="project" />
+    <orderEntry type="module" module-name="kafka-model" />
+    <orderEntry type="library" name="Maven: org.apache.avro:avro:1.11.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.2.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
+    <orderEntry type="module" module-name="kafka-config-data" />
+    <orderEntry type="module" module-name="order-domain-core" />
+    <orderEntry type="module" module-name="common-domain" />
+    <orderEntry type="library" name="Maven: org.springframework.kafka:spring-kafka:2.8.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:3.0.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.luben:zstd-jni:1.5.0-2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lz4:lz4-java:1.7.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.xerial.snappy:snappy-java:1.1.8.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: io.confluent:kafka-avro-serializer:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.21" level="project" />
+    <orderEntry type="library" name="Maven: io.confluent:kafka-schema-serializer:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: io.confluent:kafka-schema-registry-client:7.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:30.1.1-jre" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:failureaccess:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
+    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:3.8.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.5.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.3" level="project" />
+    <orderEntry type="library" name="Maven: io.confluent:common-utils:7.0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.24" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.11" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.11" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.17.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.17.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.36" level="project" />
+  </component>
+</module>

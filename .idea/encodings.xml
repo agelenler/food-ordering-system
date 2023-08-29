@@ -14,6 +14,8 @@
     <file url="file://$PROJECT_DIR$/order-service/order-messaging/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

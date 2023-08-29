@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -15,6 +16,40 @@
         <module name="order-dataaccess" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-application" target="17" />
+      <module name="common-dataaccess" target="17" />
+      <module name="customer-application" target="17" />
+      <module name="customer-application-service" target="17" />
+      <module name="customer-container" target="17" />
+      <module name="customer-dataaccess" target="17" />
+      <module name="customer-domain" target="17" />
+      <module name="customer-domain-core" target="17" />
+      <module name="customer-messaging" target="17" />
+      <module name="customer-service" target="17" />
+      <module name="infrastructure" target="17" />
+      <module name="kafka" target="17" />
+      <module name="kafka-config-data" target="17" />
+      <module name="kafka-consumer" target="17" />
+      <module name="kafka-model" target="17" />
+      <module name="kafka-producer" target="17" />
+      <module name="outbox" target="17" />
+      <module name="payment-application-service" target="17" />
+      <module name="payment-container" target="17" />
+      <module name="payment-dataaccess" target="17" />
+      <module name="payment-domain" target="17" />
+      <module name="payment-domain-core" target="17" />
+      <module name="payment-messaging" target="17" />
+      <module name="payment-service" target="17" />
+      <module name="restaurant-application-service" target="17" />
+      <module name="restaurant-container" target="17" />
+      <module name="restaurant-dataaccess" target="17" />
+      <module name="restaurant-domain" target="17" />
+      <module name="restaurant-domain-core" target="17" />
+      <module name="restaurant-messaging" target="17" />
+      <module name="restaurant-service" target="17" />
+      <module name="saga" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
