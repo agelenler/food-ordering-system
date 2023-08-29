@@ -26,5 +26,10 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="confluent" />
+      <option name="name" value="confluent" />
+      <option name="url" value="https://packages.confluent.io/maven/" />
+    </remote-repository>
   </component>
 </project>
