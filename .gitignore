@@ -3,6 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+volumes/
 
 *.log
 
@@ -33,3 +34,5 @@ build/
 
 ### VS Code ###
 .vscode/
+
+infrastructure/docker-compose/volumes/**/**
