@@ -1,0 +1,5 @@
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/infrastructure/kafka/kafka-producer/src/main/java/com/food/ordering/system/kafka/producer/KafkaMessageHelper.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/infrastructure/kafka/kafka-producer/src/main/java/com/food/ordering/system/kafka/producer/KafkaProducerConfig.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/infrastructure/kafka/kafka-producer/src/main/java/com/food/ordering/system/kafka/producer/exception/KafkaProducerException.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/infrastructure/kafka/kafka-producer/src/main/java/com/food/ordering/system/kafka/producer/service/impl/KafkaProducerImpl.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/infrastructure/kafka/kafka-producer/src/main/java/com/food/ordering/system/kafka/producer/service/KafkaProducer.java

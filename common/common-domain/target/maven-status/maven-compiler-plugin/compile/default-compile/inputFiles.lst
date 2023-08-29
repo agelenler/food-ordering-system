@@ -1,0 +1,17 @@
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/RestaurantOrderStatus.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/PaymentStatus.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/OrderId.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/entity/BaseEntity.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/PaymentOrderStatus.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/entity/AggregateRoot.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/ProductId.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/OrderStatus.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/OrderApprovalStatus.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/RestaurantId.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/CustomerId.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/BaseId.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/exception/DomainException.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/event/publisher/DomainEventPublisher.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/DomainConstants.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/event/DomainEvent.java
+/Users/aligelenler/Desktop/desktop/architectural_patterns_microservices/shared-projects/food-ordering-system/common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/Money.java

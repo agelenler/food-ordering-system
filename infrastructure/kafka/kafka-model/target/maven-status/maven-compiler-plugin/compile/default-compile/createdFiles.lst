@@ -1,0 +1,16 @@
+com/food/ordering/system/kafka/order/avro/model/CustomerAvroModel$Builder.class
+com/food/ordering/system/kafka/order/avro/model/PaymentOrderStatus.class
+com/food/ordering/system/kafka/order/avro/model/CustomerAvroModel.class
+com/food/ordering/system/kafka/order/avro/model/PaymentRequestAvroModel$Builder.class
+com/food/ordering/system/kafka/order/avro/model/RestaurantApprovalResponseAvroModel.class
+com/food/ordering/system/kafka/order/avro/model/OrderApprovalStatus.class
+com/food/ordering/system/kafka/order/avro/model/Product.class
+com/food/ordering/system/kafka/order/avro/model/RestaurantApprovalRequestAvroModel.class
+com/food/ordering/system/kafka/order/avro/model/PaymentResponseAvroModel.class
+com/food/ordering/system/kafka/order/avro/model/PaymentRequestAvroModel.class
+com/food/ordering/system/kafka/order/avro/model/RestaurantOrderStatus.class
+com/food/ordering/system/kafka/order/avro/model/PaymentResponseAvroModel$Builder.class
+com/food/ordering/system/kafka/order/avro/model/Product$Builder.class
+com/food/ordering/system/kafka/order/avro/model/PaymentStatus.class
+com/food/ordering/system/kafka/order/avro/model/RestaurantApprovalRequestAvroModel$Builder.class
+com/food/ordering/system/kafka/order/avro/model/RestaurantApprovalResponseAvroModel$Builder.class
