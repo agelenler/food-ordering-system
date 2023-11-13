@@ -26,10 +26,6 @@
       "type": {
         "type": "string"
       }
-    },
-         {
-           "name": "test",
-            "type": ["null", "string"]
-         }
+    }
   ]
 }
