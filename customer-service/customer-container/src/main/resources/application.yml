@@ -8,10 +8,10 @@ spring:
   jpa:
     open-in-view: false
     show-sql: false
-    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres?currentSchema=customer&binaryTransfer=true&reWriteBatchedInserts=true
     username: postgres
