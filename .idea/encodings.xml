@@ -14,7 +14,6 @@
     <file url="file://$PROJECT_DIR$/customer-service/customer-domain/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customer-service/customer-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customer-service/customer-messaging/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/customer-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customer-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/src/main/java" charset="UTF-8" />
