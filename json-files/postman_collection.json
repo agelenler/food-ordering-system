@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "6f1ca65f-be1d-472e-9c54-ed3e78378ee1",
+		"name": "Clean architecture course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3683237"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8181/orders",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIxMjQxYzYwMy1jNDRkLTRkNzItYTUzMC0wYWY4N2JhZjNkOTEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhaS1pbnB1dC1nZW5lcmF0b3ItY2xpZW50IiwiYXVkIjoiYWktaW5wdXQtZ2VuZXJhdG9yLWNsaWVudCIsImF1ZGllbmNlIjpbIm9yZGVyLXNlcnZpY2UiLCJjdXN0b21lci1zZXJ2aWNlIl0sIm5iZiI6MTczMjgxNjQ3MSwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImlzcyI6Imh0dHA6Ly9hdXRob3JpemF0aW9uLXNlcnZlcjo5MDAwIiwiZXhwIjoxNzMyODE4MjcxLCJpYXQiOjE3MzI4MTY0NzEsIm9yZy1uYW1lIjoiZ2VuLWFpIiwianRpIjoiMWYzZWVjZjAtNTVmZC00M2JkLWE3YzItZTc5MmVmNGViZmExIn0.e322ft5ICyIXGb4rnKo_fZhJsVafEoTYFE_Pnh3cWnJwfPVVGljVVkfYAqYZavlmk2xBBWLWCVJAm7rxXk59CfqlAkMNW4-eM6oG05NYtTpPksmSoIeT8NcIfIrcxr9C5Nf7X13h28DMymptnYXAJDcExayL2CvdXlJyQYai-IDpcwVMNaFpUFKsJQyYO1aeKPBPZgNhvI-pfIxL45ZBCGWs392PD9EF0MDEAtkb4guka_jJ86xLPpg3AxR0B2NnSEXzp_5Q3rDUMMTJX8R_M7vUGXnYS2X1F33Dw7IYa0dE_J4mUfS9NIVd1kFYhgO10KI6AUzT8NxIh0cPSOLaOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Idempotency-Key",
+						"value": "0190013f-27fc-73c4-8e2c-72efe4947bc2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerId\": \"d215b5f8-0249-4dc5-89a3-51fd148cfb41\",\n  \"restaurantId\": \"d215b5f8-0249-4dc5-89a3-51fd148cfb45\",\n  \"address\": {\n    \"street\": \"street_2\",\n    \"postalCode\": \"1000AB\",\n    \"city\": \"Amsterdam\"\n  },\n  \"price\": 50.00,\n  \"items\": [\n    {\n      \"productId\": \"d215b5f8-0249-4dc5-89a3-51fd148cfb48\",\n      \"quantity\": 1,\n      \"price\": 50.00,\n      \"subTotal\": 50.00\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8191/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8191",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8184/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerId\": \"d215b5f8-0249-4dc5-89a3-51fd148cfb41\",\n  \"username\": \"user_1\",\n  \"firstName\": \"First\",\n  \"lastName\": \"User\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8184/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8184",
+					"path": [
+						"customers"
+					]
+				},
+				"description": "Customer create POST request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8181/orders",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Idempotency-Key",
+						"value": "0190013f-27fc-73c4-8e2c-72efe4947bc2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerId\": \"d215b5f8-0249-4dc5-89a3-51fd148cfb41\",\n  \"restaurantId\": \"d215b5f8-0249-4dc5-89a3-51fd148cfb45\",\n  \"address\": {\n    \"street\": \"street_2\",\n    \"postalCode\": \"1000AB\",\n    \"city\": \"Amsterdam\"\n  },\n  \"price\": 50.00,\n  \"items\": [\n    {\n      \"productId\": \"d215b5f8-0249-4dc5-89a3-51fd148cfb48\",\n      \"quantity\": 1,\n      \"price\": 50.00,\n      \"subTotal\": 50.00\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8187/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"orders"
+					]
+				},
+				"description": "Order Create POST request"
+			},
+			"response": []
+		}
+	]
+}
