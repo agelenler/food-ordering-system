@@ -19,6 +19,7 @@ To run the project please follow the steps mentioned below:
 6.) Install and run standalone postgres database on your local system that runs on 5432 port by default. 
 
 7.) Run docker compose up commands for zookeeper, init_kafka and kafka_cluster yaml files unders infrastructure/docker-compose folder
+    For latest code in master run only -> docker compose -f common.yml -f kafka_cluster.yml up -d
 
 8.) Run the customer-service, order-service, payment-service and restaurant-service in your IDE using the spring boot main class for each module
 
