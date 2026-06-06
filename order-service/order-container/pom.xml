@@ -38,6 +38,10 @@
         </dependency>
         <dependency>
             <groupId>com.food.ordering.system</groupId>
+            <artifactId>order-ai</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.food.ordering.system</groupId>
             <artifactId>common-dataaccess</artifactId>
         </dependency>
         <dependency>
@@ -51,19 +55,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <image>
-                        <name>${project.groupId}/order.service:${project.version}</name>
-                    </image>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>build-image</goal>
-                        </goals>
-                    </execution>
-                </executions>
+<!--                <configuration>-->
+<!--                    <image>-->
+<!--                        <name>${project.groupId}/order.service:${project.version}</name>-->
+<!--                    </image>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>install</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build-image</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
             </plugin>
         </plugins>
     </build>

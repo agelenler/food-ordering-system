@@ -1,9 +1,24 @@
 package com.food.ordering.system.order.service.dataaccess.order.entity;
 
+import com.food.ordering.system.domain.valueobject.OrderPreferences;
 import com.food.ordering.system.domain.valueobject.OrderStatus;
-import lombok.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
@@ -25,6 +40,9 @@ public class OrderEntity {
     private BigDecimal price;
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(name = "order_preferences")
+    private OrderPreferences orderPreferences;
     private String failureMessages;
 
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)

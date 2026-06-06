@@ -17,6 +17,7 @@ CREATE TABLE "order".orders
     tracking_id uuid NOT NULL,
     price numeric(10,2) NOT NULL,
     order_status order_status NOT NULL,
+    order_preferences JSONB,
     failure_messages character varying COLLATE pg_catalog."default",
     CONSTRAINT orders_pkey PRIMARY KEY (id)
 );

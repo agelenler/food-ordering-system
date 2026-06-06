@@ -1,5 +1,6 @@
 package com.food.ordering.system.order.service.domain;
 
+import com.food.ordering.system.domain.valueobject.OrderPreferences;
 import com.food.ordering.system.order.service.domain.dto.create.CreateOrderCommand;
 import com.food.ordering.system.order.service.domain.entity.Customer;
 import com.food.ordering.system.order.service.domain.entity.Order;
@@ -7,6 +8,7 @@ import com.food.ordering.system.order.service.domain.entity.Restaurant;
 import com.food.ordering.system.order.service.domain.event.OrderCreatedEvent;
 import com.food.ordering.system.order.service.domain.exception.OrderDomainException;
 import com.food.ordering.system.order.service.domain.mapper.OrderDataMapper;
+import com.food.ordering.system.order.service.domain.ports.output.ai.order.noteinterpreter.OrderNoteInterpreter;
 import com.food.ordering.system.order.service.domain.ports.output.message.publisher.payment.OrderCreatedPaymentRequestMessagePublisher;
 import com.food.ordering.system.order.service.domain.ports.output.repository.CustomerRepository;
 import com.food.ordering.system.order.service.domain.ports.output.repository.OrderRepository;
@@ -34,18 +36,22 @@ public class OrderCreateHelper {
 
     private final OrderCreatedPaymentRequestMessagePublisher orderCreatedEventDomainEventPublisher;
 
+    private final OrderNoteInterpreter orderNoteInterpreter;
+
     public OrderCreateHelper(OrderDomainService orderDomainService,
                              OrderRepository orderRepository,
                              CustomerRepository customerRepository,
                              RestaurantRepository restaurantRepository,
                              OrderDataMapper orderDataMapper,
-                             OrderCreatedPaymentRequestMessagePublisher orderCreatedEventDomainEventPublisher) {
+                             OrderCreatedPaymentRequestMessagePublisher orderCreatedEventDomainEventPublisher,
+                             OrderNoteInterpreter orderNoteInterpreter) {
         this.orderDomainService = orderDomainService;
         this.orderRepository = orderRepository;
         this.customerRepository = customerRepository;
         this.restaurantRepository = restaurantRepository;
         this.orderDataMapper = orderDataMapper;
         this.orderCreatedEventDomainEventPublisher = orderCreatedEventDomainEventPublisher;
+        this.orderNoteInterpreter = orderNoteInterpreter;
     }
 
     @Transactional
@@ -53,11 +59,27 @@ public class OrderCreateHelper {
         checkCustomer(createOrderCommand.getCustomerId());
         Restaurant restaurant = checkRestaurant(createOrderCommand);
         Order order = orderDataMapper.createOrderCommandToOrder(createOrderCommand);
+        updateOrderPreferences(createOrderCommand, order);
         OrderCreatedEvent orderCreatedEvent = orderDomainService.validateAndInitiateOrder(order, restaurant,
                 orderCreatedEventDomainEventPublisher);
         saveOrder(order);
         log.info("Order is created with id: {}", orderCreatedEvent.getOrder().getId().getValue());
         return orderCreatedEvent;
+    }
+
+    private void updateOrderPreferences(CreateOrderCommand createOrderCommand, Order order) {
+        try {
+            String orderNotes = createOrderCommand.getOrderNotes();
+            if (orderNotes == null || orderNotes.isEmpty()) {
+                order.updateOrderPreferences(OrderPreferences.builder().build());
+                return;
+            }
+            OrderPreferences orderPreferences = orderNoteInterpreter.interpret(orderNotes);
+            order.updateOrderPreferences(orderPreferences);
+        } catch (Exception e) {
+            log.warn("Encountered error in AI Order Note Interpreter. Skipping order notes!");
+            order.updateOrderPreferences(OrderPreferences.builder().build());
+        }
     }
 
     private Restaurant checkRestaurant(CreateOrderCommand createOrderCommand) {

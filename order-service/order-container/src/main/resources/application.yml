@@ -15,10 +15,10 @@ spring:
   jpa:
     open-in-view: false
     show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres?currentSchema=order&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified
     username: postgres
@@ -27,6 +27,19 @@ spring:
     platform: postgres
     schema: classpath:init-schema.sql
     initialization-mode: always
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4.1-mini
+          temperature: 0.7
+          maxTokens: 500
+
+order:
+  ai:
+    interpreter:
+      max-attempts: 3
 
 kafka-config:
   bootstrap-servers: localhost:19092, localhost:29092, localhost:39092

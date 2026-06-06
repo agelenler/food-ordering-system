@@ -22,6 +22,10 @@
         </dependency>
         <dependency>
             <groupId>com.food.ordering.system</groupId>
+            <artifactId>order-ai</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.food.ordering.system</groupId>
             <artifactId>common-application</artifactId>
         </dependency>
         <dependency>
