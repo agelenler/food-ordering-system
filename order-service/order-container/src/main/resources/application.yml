@@ -4,6 +4,7 @@ server:
 logging:
   level:
     com.food.ordering.system: DEBUG
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
 
 order-service:
   payment-request-topic-name: payment-request
@@ -35,9 +36,18 @@ spring:
           model: gpt-4.1-mini
           temperature: 0.7
           maxTokens: 500
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: mistral:7b
+          max-new-tokens: 512
+          temperature: 0.7
+
 
 order:
   ai:
+    provider: openai
     interpreter:
       max-attempts: 3
 
